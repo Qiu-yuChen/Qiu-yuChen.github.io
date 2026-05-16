@@ -460,10 +460,11 @@ img {
 .header_circle {
     border: none;
     box-sizing: border-box;
-    height: 5.5rem;
-    width: 5.5rem;
+    height: 9rem;
+    width: 9rem;
     border-radius: 50%;
     border: 3px solid var(--archive_title);
+    flex-shrink: 0;
 
     img {
         @extend .header_circle;
@@ -481,8 +482,8 @@ img {
         left: 0;
         margin-left: auto;
         margin-right: auto;
-        height: 3.5rem;
-        width: 3.5rem;
+        height: 5rem;
+        width: 5rem;
     }
 }
 
