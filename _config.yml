@@ -1,10 +1,10 @@
-title: About me - Qiuyu Chen(陈秋宇)
+title: Home Page - Qiuyu Chen(陈秋宇)
 email: cqycsu@outlook.com
 description: >-
   CS Master Student at City University of Hong Kong (Dongguan).
   Research interests: Generative Models, 3D Vision, AI Agents.
 
-baseurl:
+baseurl: ""
 url: https://Qiu-yuChen.github.io
 
 permalink: /:year-:month/:title
