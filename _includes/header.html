@@ -1,21 +1,22 @@
 <header class="header">
 
-  <div class="header_content">
-    <!-- Theme toggle at very top -->
-    <label class="theme_changer">
-      <input theme_toggle type="checkbox">
-      <div class="button"></div>
-    </label>
+  <!-- Dual Logos — fixed at top of sidebar -->
+  <div class="header_logos">
+    <a href="{{ '/' | relative_url }}" class="logo_link">
+      <img src="{{ '/assets/img/cqy.png' | relative_url }}" alt="Qiuyu Chen" class="logo_personal">
+    </a>
+    <a href="{{ '/about-kailab.html' | relative_url }}" class="logo_link">
+      <img src="{{ '/assets/img/kailab.png' | relative_url }}" alt="KAI Lab" class="logo_lab">
+    </a>
+  </div>
 
-    <!-- Dual Logos — closer together, centered in sidebar -->
-    <div class="header_logos">
-      <a href="{{ '/' | relative_url }}" class="logo_link">
-        <img src="{{ '/assets/img/cqy.png' | relative_url }}" alt="Qiuyu Chen" class="logo_personal">
-      </a>
-      <a href="{{ '/about-kailab.html' | relative_url }}" class="logo_link">
-        <img src="{{ '/assets/img/kailab.png' | relative_url }}" alt="KAI Lab" class="logo_lab">
-      </a>
-    </div>
+  <!-- Theme toggle — top-right corner -->
+  <label class="theme_changer">
+    <input theme_toggle type="checkbox">
+    <div class="button"></div>
+  </label>
+
+  <div class="header_content">
 
     <a class="header_circle" href="{{ '/' | relative_url }}">
       <img src="{{ site.user.pic | relative_url }}" alt="{{ site.user.picAlt }}">

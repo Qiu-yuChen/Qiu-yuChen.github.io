@@ -402,7 +402,7 @@ img {
         justify-content: center;
         height: 100%;
         width: 100%;
-        padding: 2rem 0;
+        padding: 3.5rem 0 1.5rem;
     }
 
     @include mobile-only {
@@ -411,17 +411,25 @@ img {
     }
 }
 
-/* === Dual Logo Row — centered, close together === */
+/* === Dual Logo Row — fixed at top of sidebar === */
 .header_logos {
+    position: absolute;
+    top: 0.8rem;
+    left: 0;
+    right: 0;
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 0.25rem;
-    margin-bottom: 0.8rem;
+    z-index: 2;
+
+    @include mobile-only {
+        top: 0.5rem;
+    }
 
     .logo_personal {
-        width: 46px;
-        height: 46px;
+        width: 44px;
+        height: 44px;
         border-radius: 50%;
         object-fit: cover;
         box-shadow: 0 2px 6px var(--logo_shadow);
@@ -429,8 +437,8 @@ img {
     }
 
     .logo_lab {
-        width: 46px;
-        height: 46px;
+        width: 44px;
+        height: 44px;
         border-radius: 8px;
         object-fit: cover;
         box-shadow: 0 2px 6px var(--logo_shadow);
@@ -502,12 +510,13 @@ img {
     font-style: italic;
 }
 
-/* Theme toggle — positioned at top center */
+/* Theme toggle — positioned at top-right, above logos */
 .theme_changer {   
     cursor: pointer;
-    display: flex;
-    justify-content: center;
-    margin-bottom: 0.3rem;
+    position: absolute;
+    top: 0.7rem;
+    right: 0.9rem;
+    z-index: 3;
     
     input {
         display: none;
