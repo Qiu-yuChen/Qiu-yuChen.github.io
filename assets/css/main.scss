@@ -462,33 +462,30 @@ img {
 }
 
 .header_circle {
-    border: none;
-    box-sizing: border-box;
-    height: 9rem;
-    width: 9rem;
-    border-radius: 50%;
-    border: 3px solid var(--archive_title);
+    display: block;
     flex-shrink: 0;
 
     img {
-        width: 100%;
-        height: 100%;
+        display: block;
+        height: 9rem;
+        width: 9rem;
         border-radius: 50%;
+        border: 3px solid var(--archive_title);
         object-fit: cover;
+        box-sizing: border-box;
+        transition: transform 0.3s ease;
     }
 
-    &:hover {
-        cursor: pointer;
+    &:hover img {
         animation: jiggle 2s ease-in-out infinite;
+        cursor: pointer;
     }
 
     @include mobile-only {
-        bottom: 0;
-        left: 0;
-        margin-left: auto;
-        margin-right: auto;
-        height: 5rem;
-        width: 5rem;
+        img {
+            height: 5rem;
+            width: 5rem;
+        }
     }
 }
 
