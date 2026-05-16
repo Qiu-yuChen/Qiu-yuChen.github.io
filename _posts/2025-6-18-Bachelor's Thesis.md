@@ -1,6 +1,6 @@
 ---
-title: Some articles are just so long they deserve a really long title to see if things will break well
-categories: [travel]
+title: Design of Measurement and Control System for Underground Pipeline Inspection Robot
+categories: [Theis]
 comments: true
 ---
 
