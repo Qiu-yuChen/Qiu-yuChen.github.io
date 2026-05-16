@@ -1,30 +1,36 @@
+title: Qiuyu Chen (Magika)
+email: cqycsu@outlook.com
+description: >-
+  CS Master Student at City University of Hong Kong (Dongguan).
+  Research interests: Generative Models, 3D Vision, AI Agents.
 
-title: Qiuyu Chen #Your awesome title
-email: #cqycsu@outlook.com
-description: > # this means to ignore newlines until "baseurl"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
-
-baseurl: # the subpath of the site
-url: http://Qiu-yuChen.github.io # the base hostname & protocol for your site
+baseurl:
+url: https://Qiu-yuChen.github.io
 
 permalink: /:year-:month/:title
-timezone:
+timezone: Asia/Shanghai
 
-favicon: /assets/img/favicon.ico
+favicon: /assets/img/cqy.png
 
-google_analytics: #UA—XXXXXXXX-X
-disqus_shortname: #disqus shortname
+google_analytics:
+disqus_shortname:
 cusdis:
-    app_id: #your cusdis app_id
+    app_id:
 
 user:
   name: Qiuyu Chen
   pic: /assets/img/Qiuyu.png
-  picAlt: "catbook"
-  job: Master Student of City University of Hongkong (Dongguan)
-#  aboutme: true # comment this out if you don't need the 'about' page.
+  picAlt: "Qiuyu Chen"
+  job: M.Sc. Student, CityUHK (Dongguan)
+  message: "Generative Models · 3D Vision · AI Agents"
+  aboutme: true
+
+# Publication News (most recent first)
+news:
+  - date: 2026-05-14
+    text: Submitted 1 paper to NeurIPS 2026 Competition Track!
+  - date: 2026-05-07
+    text: Submitted 1 paper to NeurIPS 2026 Main Conference!
 
 exclude:
   - README.md
@@ -37,13 +43,12 @@ defaults:
       type: posts
     values:
       layout: post
-      comment: true   
+      comment: true
 
 markdown_ext: "markdown,mkdown,mkdn,mkd,md"
-markdown: kramdown 
+markdown: kramdown
 
-# Filtering Content
 show_drafts: null
 limit_posts: 0
-future:      false
+future: false
 unpublished: false

@@ -23,6 +23,25 @@
 
 <!-- main page -->
 {% else %}
+
+<!-- Publication News Banner -->
+{% if site.news %}
+<div class="news_banner">
+  <div class="news_banner_header">
+    <span class="news_icon">📢</span>
+    <span class="news_banner_title">Latest News</span>
+  </div>
+  <ul class="news_banner_list">
+    {% for item in site.news %}
+    <li class="news_banner_item">
+      <span class="news_banner_date">{{ item.date | date: "%Y-%m-%d" }}</span>
+      <span class="news_banner_text">{{ item.text }}</span>
+    </li>
+    {% endfor %}
+  </ul>
+</div>
+{% endif %}
+
 <div class="archive">
   {% for post in site.posts %}
   {% unless post.next %}
