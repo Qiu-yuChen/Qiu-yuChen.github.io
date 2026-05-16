@@ -21,9 +21,9 @@ cusdis:
 
 user:
   name: Qiuyu Chen
-  pic: /assets/img/Qiuyu.jpg
+  pic: /assets/img/Qiuyu.png
   picAlt: "catbook"
-  job: First-year Master Student of City University of Hongkong (Dongguan)
+  job: Master Student of City University of Hongkong (Dongguan)
 #  aboutme: true # comment this out if you don't need the 'about' page.
 
 exclude:
