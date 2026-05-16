@@ -13,6 +13,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="{{ site.description | strip_newlines | strip }}">
 
+  <!-- Open Graph -->
+  <meta property="og:title" content="{{ title }}">
+  <meta property="og:description" content="{{ site.description | strip_newlines | strip }}">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="{{ page.url | replace:'index.html','' | prepend: site.url }}">
+  <meta property="og:image" content="{{ '/assets/img/cqy.png' | prepend: site.url }}">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="{{ title }}">
+  <meta name="twitter:description" content="{{ site.description | strip_newlines | strip }}">
+  <meta name="twitter:image" content="{{ '/assets/img/cqy.png' | prepend: site.url }}">
+
   <link rel="stylesheet" href="{{ 'assets/css/main.css' | relative_url }}" media="all">
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.url }}">
   <link rel="alternate" type="application/rss+xml" title="{{ site.title | escape }}"

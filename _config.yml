@@ -24,6 +24,9 @@ user:
   job: M.Sc. Student, CityUHK (Dongguan)
   message: "Generative Models · 3D Vision · AI Agents"
   aboutme: true
+  github: https://github.com/Qiu-yuChen
+  email: cqycsu@outlook.com
+  scholar: "#"  # placeholder — update with your Google Scholar URL
 
 # Publication News (most recent first)
 news:
