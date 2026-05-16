@@ -32,8 +32,9 @@
     href="{{ '/feed.xml' | relative_url }}" />
 
   <!-- favicon -->
-  <link rel="shortcut icon" href="{{ site.favicon | relative_url }}" type="image/x-icon" />
-  <link rel="icon" href="{{ site.favicon | relative_url }}" type="image/x-icon" />
+  <link rel="icon" type="image/png" sizes="128x128" href="{{ site.favicon | relative_url }}">
+  <link rel="apple-touch-icon" sizes="128x128" href="{{ site.favicon | relative_url }}">
+  <link rel="shortcut icon" href="{{ site.favicon | relative_url }}">
 
   <!-- fonts: Inter for body, JetBrains Mono for code -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
