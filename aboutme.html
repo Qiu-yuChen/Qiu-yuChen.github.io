@@ -1,5 +1,6 @@
 ---
 layout: page
+permalink: /aboutme.html
 ---
 
 <section class="aboutme">
@@ -20,10 +21,13 @@ layout: page
         </ul>
 
         <h3>📝 Recent News</h3>
+        {% if site.news %}
         <ul>
-            <li><strong>2026-05-14</strong> — Submitted 1 paper to NeurIPS 2026 Competition Track! 🏆</li>
-            <li><strong>2026-05-07</strong> — Submitted 1 paper to NeurIPS 2026 Main Conference! 📄</li>
+            {% for item in site.news %}
+            <li><strong>{{ item.date | date: "%Y-%m-%d" }}</strong> — {{ item.text }}</li>
+            {% endfor %}
         </ul>
+        {% endif %}
 
         <h3>🛠 Skills</h3>
         <p>

@@ -1,6 +1,12 @@
 <header class="header">
 
   <div class="header_content">
+    <!-- Theme toggle at very top -->
+    <label class="theme_changer">
+      <input theme_toggle type="checkbox">
+      <div class="button"></div>
+    </label>
+
     <!-- Dual Logos -->
     <div class="header_logos">
       <a href="{{ '/' | relative_url }}" class="logo_link">
@@ -10,11 +16,6 @@
       <img src="{{ '/assets/img/kailab.png' | relative_url }}" alt="KAI Lab" class="logo_lab">
     </div>
 
-    <label class="theme_changer">
-      <input theme_toggle type="checkbox">
-      <div class="button"></div>
-    </label>
-
     <a class="header_circle" href="{{ '/' | relative_url }}">
       <img src="{{ site.user.pic | relative_url }}" alt="{{ site.user.picAlt }}">
     </a>
@@ -22,36 +23,27 @@
     <span class="header_job">{{ site.user.job }}</span>
     <span class="header_mes">{{ site.user.message }}</span>
 
-    <!-- News Flash -->
-    {% if site.news %}
-    <div class="header_news">
-      <div class="news_label">📢 Latest</div>
-      {% for item in site.news limit:3 %}
-      <div class="news_item">
-        <span class="news_date">{{ item.date | date: "%b %d" }}</span>
-        <span class="news_text">{{ item.text }}</span>
-      </div>
-      {% endfor %}
-    </div>
-    {% endif %}
-
     <nav class="nav">
-      {% if site.user.aboutme %}
       <ul class="nav_list">
         <li class="nav_item">
-          <a href="{{ site.baseurl }}/aboutme.html">about</a>
+          <a href="{{ '/' | relative_url }}">About me</a>
         </li>
       </ul>
-      {% endif %}
-      {% for category in site.categories %}
-      {% capture cat_name %}{{ category | first }}{% endcapture %}
       <ul class="nav_list">
         <li class="nav_item">
-          <a href="{{ site.baseurl }}/categories/{{ cat_name }}" id="aa">{{ cat_name }}
-            ({{ category | last | size }})</a>
+          <a href="{{ '/about-kailab.html' | relative_url }}">About KAI Lab</a>
         </li>
       </ul>
-      {% endfor %}
+      <ul class="nav_list">
+        <li class="nav_item">
+          <a href="{{ '/publications.html' | relative_url }}">Publications</a>
+        </li>
+      </ul>
+      <ul class="nav_list">
+        <li class="nav_item">
+          <a href="{{ '/teaching.html' | relative_url }}">Teaching</a>
+        </li>
+      </ul>
     </nav>
   </div>
 

@@ -28,6 +28,7 @@ $amber-light: #e8c547;
     --job_font: #555;
     --nav_font: #2c7a7b;
     --nav_font_hover: #5aadad;
+    --nav_bg_hover: rgba(44,122,123,0.06);
     --shadow_color: rgba(0,0,0,0.06);
     --post_title: #1a4a4a;
     --post_date: #888;
@@ -42,8 +43,6 @@ $amber-light: #e8c547;
     --border_radius: 12px;
     --news_bg: #f0f9f9;
     --news_border: #c5e8e8;
-    --news_label: #fff;
-    --news_label_bg: #2c7a7b;
     --logo_shadow: rgba(0,0,0,0.08);
     --cat_accent: #f5e6d3;
 }
@@ -59,6 +58,7 @@ $amber-light: #e8c547;
     --job_font: #abb2bf;
     --nav_font: #5aadad;
     --nav_font_hover: #7ccccc;
+    --nav_bg_hover: rgba(90,173,173,0.08);
     --shadow_color: rgba(0,0,0,0.4);
     --post_title: #5aadad;
     --post_date: #7a7d85;
@@ -73,8 +73,6 @@ $amber-light: #e8c547;
     --border_radius: 12px;
     --news_bg: #2c313a;
     --news_border: #3a3f4b;
-    --news_label: #1a1d23;
-    --news_label_bg: #5aadad;
     --logo_shadow: rgba(0,0,0,0.3);
     --cat_accent: #3a3028;
 }
@@ -153,7 +151,7 @@ body {
 
 a {
     text-decoration: none;
-    transition: color 0.2s ease;
+    transition: color 0.2s ease, background 0.2s ease;
 }
 
 img {
@@ -196,7 +194,7 @@ img {
 .aboutme {
     @include breakpoint(medium) {
         max-width: 36rem;
-        margin-top: 5.5rem;
+        margin-top: 3rem;
 
         img {
             float: none;
@@ -240,6 +238,19 @@ img {
         font-size: 0.85rem;
         color: var(--post_date);
         font-style: italic;
+    }
+}
+
+.archive-container {
+    @include breakpoint(medium) {
+        max-width: 36rem;
+        margin-top: 3rem;
+    }
+
+    @include mobile-only {
+        margin-top: 2rem;
+        margin-left: 1rem;
+        margin-right: 1rem;
     }
 }
 
@@ -313,13 +324,12 @@ img {
 
     @include breakpoint(medium) {
         max-width: 36rem;
-        margin-top: 5rem;
     }
 
     @include mobile-only {
-        margin-top: 2rem;
-        margin-left: 1.2rem;
-        margin-right: 1.2rem;
+        margin-top: 1rem;
+        margin-left: 0;
+        margin-right: 0;
     }
 }
 
@@ -388,7 +398,7 @@ img {
     text-align: center;
 
     @include breakpoint(medium) {
-        margin-top: 2rem;
+        margin-top: 1rem;
         width: 100%;
     }
 
@@ -489,59 +499,12 @@ img {
     font-style: italic;
 }
 
-/* === News Flash in Sidebar === */
-.header_news {
-    margin: 1rem 1.2rem 0 1.2rem;
-    padding: 0.6rem 0.8rem;
-    background: var(--news_bg);
-    border-radius: 10px;
-    border: 1px solid var(--news_border);
-    text-align: left;
-
-    .news_label {
-        display: inline-block;
-        font-size: 0.65rem;
-        font-weight: 700;
-        text-transform: uppercase;
-        letter-spacing: 1px;
-        color: var(--news_label);
-        background: var(--news_label_bg);
-        padding: 0.15rem 0.6rem;
-        border-radius: 4px;
-        margin-bottom: 0.5rem;
-    }
-
-    .news_item {
-        font-size: 0.72rem;
-        line-height: 1.35;
-        margin-bottom: 0.35rem;
-        padding-bottom: 0.35rem;
-        border-bottom: 1px dotted var(--news_border);
-
-        &:last-child {
-            margin-bottom: 0;
-            padding-bottom: 0;
-            border-bottom: none;
-        }
-    }
-
-    .news_date {
-        font-weight: 700;
-        color: var(--archive_title);
-        margin-right: 0.3rem;
-        font-size: 0.68rem;
-    }
-
-    .news_text {
-        color: var(--archive_font);
-    }
-}
-
+/* Theme toggle — positioned at top center */
 .theme_changer {   
     cursor: pointer;
-    position: absolute;
-    top: 0.6rem;
-    right: 0.8rem;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 0.3rem;
     
     input {
         display: none;
@@ -549,8 +512,8 @@ img {
         &+div {
             background: url('../img/m.png') no-repeat center center;
             background-size: contain;
-            width: 24px;
-            height: 24px;
+            width: 26px;
+            height: 26px;
             border-radius: 50%;
             position: relative;
             transition: box-shadow .5s ease 0s, transform .5s ease .1s;
@@ -570,8 +533,8 @@ img {
                 background-size: contain;
                 border-radius: 50%;
                 content: '';
-                width: 24px;
-                height: 24px;
+                width: 26px;
+                height: 26px;
                 position: absolute;
                 transform: scale(0);
                 transition: all .5s ease;
@@ -594,8 +557,9 @@ img {
     margin-right: auto;
 }
 
+/* Navigation — vertical stacked items */
 .nav {
-    margin-top: 1rem;
+    margin-top: 1.2rem;
 
     @include mobile-only {
         display: none;
@@ -606,21 +570,32 @@ img {
     margin: 0;
     padding: 0;
     list-style: none;
+    display: block;
+    margin-bottom: 0.15rem;
 
     @include mobile-only {
         text-align: center;
+        display: inline;
     }
 }
 
 .nav_item {
-    display: inline-block;
-    *display: inline;
-    zoom: 1;
+    display: block;
+    margin: 0 1.5rem;
+    border-radius: 8px;
+    transition: background 0.2s ease;
+
+    &:hover {
+        background: var(--nav_bg_hover);
+    }
 
     & a {
+        display: block;
+        padding: 0.55rem 1rem;
         color: var(--nav_font);
-        font-size: 85%;
+        font-size: 90%;
         font-weight: 500;
+        border-radius: 8px;
 
         &:hover,
         &:focus {
@@ -629,6 +604,8 @@ img {
     }
 
     @include mobile-only {
+        display: inline;
+
         &:after {
             content: '/';
             color: var(--nav_font);
@@ -641,6 +618,15 @@ img {
 
         &:last-child {
             margin-right: 0;
+        }
+
+        & a {
+            display: inline;
+            padding: 0;
+        }
+
+        &:hover {
+            background: transparent;
         }
     }
 }
@@ -676,7 +662,7 @@ img {
 
     @include breakpoint(medium) {
         max-width: 38rem;
-        margin-top: 5rem;
+        margin-top: 3rem;
     }
 
     @include mobile-only {
@@ -882,7 +868,7 @@ img {
 }
 
 
-/* 5. News Banner (homepage)
+/* 5. News Banner (homepage / publications page)
    ========================================================================== */
 
 .news_banner {

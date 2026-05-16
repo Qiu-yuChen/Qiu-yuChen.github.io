@@ -1,0 +1,52 @@
+---
+layout: page
+title: Publications
+---
+
+<section class="archive-container">
+    <!-- Latest News Banner -->
+    {% if site.news %}
+    <div class="news_banner">
+        <div class="news_banner_header">
+            <span class="news_icon">📢</span>
+            <span class="news_banner_title">Latest News</span>
+        </div>
+        <ul class="news_banner_list">
+            {% for item in site.news %}
+            <li class="news_banner_item">
+                <span class="news_banner_date">{{ item.date | date: "%Y-%m-%d" }}</span>
+                <span class="news_banner_text">{{ item.text }}</span>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+    {% endif %}
+
+    <!-- Blog Archive -->
+    <div class="archive">
+        {% for post in site.posts %}
+        {% unless post.next %}
+        <p class="archive_year">{{ post.date | date: '%Y' }}</p>
+        {% else %}
+        {% capture year %}{{ post.date | date: '%Y' }}{% endcapture %}
+        {% capture nextyear %}{{ post.next.date | date: '%Y' }}{% endcapture %}
+        {% if year != nextyear %}
+        <p class="archive_year">{{ post.date | date: '%Y' }}</p>
+        {% endif %}
+        {% endunless %}
+
+        <ul>
+            <li>
+                <time class="archive_date" datetime="{{ post.date | date_to_xmlschema }}">
+                    {{ post.date | date: "%b %d" }}
+                </time>
+                <div class="archive_title">
+                    <a href="{{ post.url | relative_url }}">
+                        {{ post.title | escape }}
+                    </a>
+                </div>
+            </li>
+        </ul>
+        {% endfor %}
+    </div>
+</section>
