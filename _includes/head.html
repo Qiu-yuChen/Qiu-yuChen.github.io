@@ -5,6 +5,9 @@
 {% endif %}
 
 <head>
+  <link rel="shortcut icon" href="/favicon.ico">
+  <link rel="icon" type="image/png" sizes="128x128" href="/favicon.png">
+  <link rel="apple-touch-icon" sizes="128x128" href="/apple-touch-icon.png">
   <title>{{ title }}</title>
   {% include google_analytics.html %}
   <meta charset="utf-8">
@@ -30,12 +33,6 @@
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.url }}">
   <link rel="alternate" type="application/rss+xml" title="{{ site.title | escape }}"
     href="{{ '/feed.xml' | relative_url }}" />
-
-  <!-- favicon (all browsers) -->
-  <link rel="shortcut icon" href="{{ '/favicon.ico' | prepend: site.url }}">
-  <link rel="icon" type="image/png" sizes="128x128" href="{{ '/favicon.png' | prepend: site.url }}">
-  <link rel="icon" type="image/png" sizes="32x32" href="{{ '/favicon.png' | prepend: site.url }}">
-  <link rel="apple-touch-icon" sizes="128x128" href="{{ '/apple-touch-icon.png' | prepend: site.url }}">
 
   <!-- fonts: Inter for body, JetBrains Mono for code -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
