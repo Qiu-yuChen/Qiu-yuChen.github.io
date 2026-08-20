@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "published_at_utc": "2026-08-20T13:27:17Z",
+  "target_url": "https://qiu-yuchen.github.io/comparisons2/",
+  "source_workdir": "/home/kai.wang/cqy/trellis_image_teacher_pilot/ss_distill_psdi_stage1",
+  "source_page": "evaluations/comparisons/index.html",
+  "source_page_sha256": "f8c1b67c12613cb10167af062b5a12b73f76833918302d9c39ca978d32b5e02c",
+  "published_page_sha256": "8b34e6e8f046fee2881ddccee8febb77b334ad6b289d3c47d9c84bc7746afb85",
+  "content": {
+    "prompt_count": 128,
+    "model_branches": 5,
+    "inference_seeds": 2,
+    "input_images": 128,
+    "contact_sheets": 1280,
+    "turntable_videos": 1278,
+    "preserved_failed_records": 2,
+    "html_local_references": 2688,
+    "missing_html_references": 0
+  },
+  "web_transcoding": {
+    "applied_to_turntable_videos_only": true,
+    "codec": "libx264",
+    "crf": 28,
+    "preset": "medium",
+    "pixel_format": "yuv420p",
+    "faststart": true,
+    "scientific_metrics_or_labels_changed": false
+  },
+  "aggregate_hashes": {
+    "published_video_sha256_list_sha256": "94cc2d1203798d565d21288bb48a0674f812150777f422c96083e31c2b01a5cc",
+    "contact_sheet_sha256_list_sha256": "da037dc511e1845a187c6832b3cae8d813fa8c8418a3240d564bb9487cf854ea",
+    "input_image_sha256_list_sha256": "0f221d59fde0d1732e0a5ad5747aa95a68d14179afd21f8540ec60584dd51729"
+  }
+}
